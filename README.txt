@@ -9,6 +9,8 @@ GET STARTED
 5. Record sets of questions in "Practice log" and full scores in "Mock tests".
 6. Use "Mistake journal" to record and revisit incorrect questions.
 7. Open PDFs in "Practice papers" — the full PDF collection is in the resources folder.
+8. Use "Vocabulary" to add words and definitions, review them in a table or study
+   with flashcards. Reveal a definition, then mark the word as known or still learning.
 
 FEATURES
 - 65 official-specification syllabus objectives (M1.1 through M5.19)
@@ -18,6 +20,8 @@ FEATURES
 - Mistake journal with reasons, corrections and resolved state
 - Dashboard with topic coverage, weekly time, study streak and suggested next topics
 - Backup/restore with JSON files, goal settings, search and filters
+- Vocabulary with word/definition entry, editing, search, learning status,
+  table review and shuffled flashcards; included in JSON backups
 - Mobile-responsive, fully client-side, no login required
 
 IMPORTANT NOTES
