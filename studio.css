@@ -269,3 +269,78 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .vocab-heading { flex-wrap: wrap; }
   .vocab-heading > .btn { margin-top: 0; }
 }
+
+/* Additional study time and a local library of original files. */
+.activity-layout { align-items: start; }
+.study-log { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 18px; }
+.study-log summary { cursor: pointer; color: var(--blue); font-size: 14px; font-weight: 650; padding: 6px 0; }
+.study-log summary span { display: block; margin: 5px 0 0 19px; color: var(--muted); font-size: 11px; font-weight: 400; }
+.study-log summary:focus-visible { outline: 3px solid #438b70; outline-offset: 4px; border-radius: 4px; }
+.study-log-body { padding-top: 10px; }
+.study-history { max-height: 360px; overflow-y: auto; padding-right: 6px; }
+.study-history .row-flex { overflow-wrap: anywhere; }
+.file-input { height: auto; min-height: 52px; padding: 8px; max-width: 100%; font-size: 12px; }
+.file-input::file-selector-button { margin-right: 10px; border: 1px solid #d3dfcd; background: #edf3e7; color: #3f6540; border-radius: 6px; padding: 8px 12px; font: inherit; cursor: pointer; }
+.upload-panel { margin-bottom: 26px; }
+.uploaded-library, .reference-library { margin-bottom: 30px; }
+.uploaded-library .section-toolbar, .reference-library .section-toolbar { margin-bottom: 18px; }
+.uploaded-library .subsection, .reference-library .subsection { margin: 0; }
+.uploaded-resource h3, .uploaded-resource p, .file-actions .btn, .mock-attachments .btn { overflow-wrap: anywhere; white-space: normal; min-width: 0; }
+.uploaded-resource .resource-icon, .reference-library .resource-icon { font-size: 11px; font-weight: 700; }
+.file-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.file-actions .field { flex: 1; min-width: 90px; }
+.file-actions .btn { flex-shrink: 0; }
+.mock-history { margin-top: 24px; }
+.mock-record { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.mock-record:first-of-type { padding-top: 0; }
+.mock-record:last-of-type { border-bottom: 0; padding-bottom: 0; }
+.mock-record .list-row { border: 0; }
+.mock-record .row-flex { overflow-wrap: anywhere; }
+.mock-attachments { display: flex; flex-wrap: wrap; gap: 9px; }
+.mock-attachments > .btn { max-width: 100%; }
+.mock-score-form { max-width: 350px; margin-top: 18px; }
+.mock-score-form .field { max-width: 160px; }
+.attach-label { position: relative; cursor: pointer; }
+.attach-label:focus-within { outline: 3px solid #438b70; outline-offset: 3px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.file-viewer { width: min(1100px, calc(100% - 40px)); max-height: calc(100dvh - 40px); border: 1px solid var(--line); border-radius: 16px; background: #fff; color: var(--ink); padding: 24px; box-shadow: 0 18px 80px #172e3640; }
+.file-viewer::backdrop { background: #1e332ac4; backdrop-filter: blur(3px); }
+.file-viewer [hidden] { display: none; }
+.file-viewer-header { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; margin-bottom: 18px; }
+.file-viewer-header > div { min-width: 0; }
+.file-viewer-header h2 { margin: 0; font-size: 18px; overflow-wrap: anywhere; }
+.file-viewer-header p { margin: 6px 0 0; }
+.file-viewer-toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+.file-preview { min-height: 120px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #f4f6f2; }
+.file-preview iframe { width: 100%; height: 63dvh; min-height: 280px; border: 0; background: #fff; }
+.file-preview img { display: block; max-width: 100%; max-height: 63dvh; object-fit: contain; }
+.file-preview p { padding: 20px; text-align: center; }
+@media (max-width: 640px) {
+  .file-input { font-size: 12px; }
+  .study-log .split-inputs { grid-template-columns: 1fr; gap: 0; }
+  .study-log summary span { margin-left: 0; }
+  .file-viewer { width: calc(100% - 20px); max-height: calc(100dvh - 20px); padding: 16px; }
+  .file-viewer-header { gap: 10px; }
+  .file-viewer-header h2 { font-size: 15px; }
+  .file-preview iframe { height: 55dvh; min-height: 220px; }
+  .file-viewer-toolbar .btn { flex: 1; font-size: 12px; }
+  .mock-attachments .btn { min-height: 44px; }
+  .reference-library .section-toolbar { align-items: flex-start; }
+}
+.pdf-reader { width: 100%; min-width: 0; }
+.pdf-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; padding: 12px; border-bottom: 1px solid var(--line); background: #f9fbf6; }
+.pdf-page-label { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); }
+.pdf-page-label .field { width: 68px; height: 38px; padding: 6px; text-align: center; }
+.pdf-zoom-label .field { width: 125px; height: 38px; padding: 6px 10px; font-size: 12px; }
+.pdf-reader > .data-note { margin: 8px 12px; text-align: center; }
+.pdf-canvas-wrap { overflow: auto; max-height: 57dvh; padding: 12px; background: #e4e9e1; }
+.pdf-canvas-wrap canvas { display: block; margin: 0 auto; background: white; box-shadow: 0 2px 6px #263b3522; }
+.pdf-canvas-wrap:focus-visible { outline: 3px solid #438b70; outline-offset: -3px; }
+@media (max-width: 640px) {
+  .pdf-controls { gap: 8px; padding: 8px; }
+  .pdf-controls > .btn { min-height: 40px; padding: 6px 8px; font-size: 11px; }
+  .pdf-page-label { gap: 4px; font-size: 11px; }
+  .pdf-page-label .field { width: 48px; }
+  .pdf-zoom-label { flex-basis: 100%; text-align: center; }
+  .pdf-canvas-wrap { max-height: 45dvh; }
+}
